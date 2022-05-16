@@ -1,0 +1,476 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('font/Gilroy-Regular.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gilroy Bold';
+    src: url('font/Gilroy-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: "Verdana Bold";
+  src: url("./font/Verdana-Bold.ttf");
+}
+@font-face {
+  font-family: "Verdana";
+  src: url("./font/Verdana.ttf");
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #551fbd;
+    font-family: 'Gilroy';
+}
+
+*{
+    font-family: 'Gilroy';
+    list-style: none;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Remove spinners from the number input */
+/* For Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* For Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.container{
+    min-height: 80vh;
+}
+
+/* Title of the app in top left*/
+.app-title {
+    font-size: 2em;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+/* Color of title of the app in top left*/
+.app-title a{
+    color: #a2eacb;
+}
+
+/* Font of title of the app in top left*/
+.container .app-title a b{
+    font-family: 'Gilroy Bold';
+}
+
+/* Centering of the "Balance" word and number*/
+.header .balance{
+    margin-top: 45px;
+    text-align: center;
+}
+
+/* Color and font of the "Balance" word*/
+.header .balance .title{
+    color: #a2eacb;
+    font-size: 3em;
+    font-family: 'Gilroy Bold';
+}
+
+/* Color and font of the "Balance" number*/
+.header .balance .value{
+    color: #a2eacb;
+    font-size: 2em;
+    margin-top: 10px;
+    font-family: 'Gilroy Bold';
+}
+
+/* Centering of "Income," "Chart," and "Expense"*/
+.header .account{
+    display: block;
+    width: 310px;
+    margin: 35px auto 0;
+    line-height: 1.7em;
+    text-align: center;
+}
+
+/* Alignment of "Income," "Chart," and "Expense"*/
+.header .account .income, .chart, .outcome{
+    height: 50px;
+    display: inline-block;
+    width: 100px;
+    vertical-align: middle;
+}
+
+/* Color of "Income" word to the left of chart*/
+.header .account .income .title{
+    color: #a2eacb;
+}
+
+/* Color of "Income" number to the left of chart*/
+.header .account .income .income-total{
+    color: #a2eacb;
+    font-family: 'Gilroy Bold';
+}
+
+/* Color of "Expense" word to the right of chart*/
+.header .account .outcome .title{
+    color: #a2eacb;
+}
+
+/* Color of "Expense" number to the right of chart*/
+.header .account .outcome .outcome-total{
+    color: #f0624d;
+    font-family: 'Gilroy Bold';
+}
+
+/*/////////////   DASHBOARD    /////////////*/
+/* Dimensions of the lower dashboard*/
+.dashboard{
+    width: 100%;
+    height: 550px;
+    background-color: #a2eacb;
+    margin-top: 35px;
+    border-radius: 30px 30px;
+}
+
+/* Color and font and alignment of the "Dashboard" word*/
+.dashboard .dash-title{
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 20px;
+    color: #1a0034;
+    font-size: 3em;
+    margin-top: 30px;
+    font-family: 'Gilroy Bold';
+}
+
+/* Alignment of the buttons*/
+.toggle{
+    text-align: left;
+    padding-left: 20px;
+    margin-top: 30px;
+}
+
+/* Dimensions of the buttons*/
+.toggle .tab1, .tab2, .tab3{
+    display: inline-block;
+    cursor: pointer;
+    font-size: 2em;
+    color: #1a0034;
+    font-family: 'Gilroy Bold';
+    opacity: 0.4;
+}
+
+/* Spacing of the buttons from eachother*/
+.toggle .tab2, .tab3{
+    margin-left: 200px;
+}
+
+/* Opacity of the buttons*/
+.active{
+    opacity : 1 !important;
+}
+
+/* Hide the displays of buttons that aren't pressed*/
+.hide{
+    display: none;
+}
+
+.dashboard input{
+    /* Make input selectable */
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
+}
+
+/* ////////// ALL ///////////// */
+/* When the "All" button is selected*/
+.dashboard #all{
+    width: 360px;
+    height: 339px;
+    position: relative;
+}
+
+/* Dimensions of the container when "All" button is pressed*/
+.dashboard #all ul{
+    width: 710px;
+    height: 285px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+/* Dimensions of the entries when "All" button is pressed*/
+.dashboard #all ul.list li{
+    position: relative;
+    font-size: 1.5em;
+}
+
+.dashboard #all ul.list li *{
+    display: inline-block;
+    height: 30px;
+    vertical-align: middle;
+}
+
+/* Spacing of entries when "All" button is pressed*/
+.dashboard #all ul.list li .entry{
+    width: 250px;
+    height: auto;
+    padding-left: 40px;
+    margin-bottom: 10px;;
+    word-wrap: break-word;
+    font-family: 'Gilroy Bold';
+}
+
+/* Incase we want to add the edit button "All" button is pressed*/
+.dashboard #all ul.list li #edit{
+    visibility: hidden;
+}
+
+/* Delete button*/
+.dashboard #all ul.list li #delete{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 30px;
+    top: 5px;
+    cursor: pointer;
+    background-image: url('image/trash.svg');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+
+/* Color of the income entries*/
+.dashboard #all ul.list li.income{
+
+}
+
+/* Color of the expense entries*/
+.dashboard #all ul.list li.expense{
+    color: #f0624d;
+}
+
+/* //////// EXPENSE ////////// */
+/* When the "Expense" button is selected (Same format as "All" button)*/
+.dashboard #expense{
+    width: 360px;
+    height: 339px;
+    position: relative;
+}
+
+.dashboard #expense .input{
+    position: absolute;
+    display: block;
+    left: 175px;
+    width: 400px;
+    bottom: 0;
+    border-top: 1px solid #ccc;
+}
+
+.dashboard #expense .input *{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.dashboard #expense .input input#expense-title-input{
+    height: 40px;
+    width : 150px;
+    padding-left: 10px;
+    font-size: 1.2em;
+    font-family: 'Gilroy';
+    margin: 5px;
+    margin-left: 10px;
+    border-radius: 10px 10px;
+    border: none;
+}
+
+.dashboard #expense .input input#expense-amount-input{
+    height: 40px;
+    width : 150px;
+    padding-left: 10px;
+    font-size: 1.2em;
+    font-family: 'Gilroy';
+    margin: 5px;
+    margin-left: -5px;
+    border-radius: 10px 10px;
+    border: none;
+}
+
+.dashboard #expense .input .add-expense img{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.dashboard #expense ul{
+    width: 710px;
+    height: 285px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.dashboard #expense ul.list li{
+    position: relative;
+    font-size: 1.5em;
+}
+
+.dashboard #expense ul.list li *{
+    display: inline-block;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.dashboard #expense ul.list li .entry{
+    width: 250px;
+    height: auto;
+    padding-left: 40px;
+    margin-bottom: 10px;;
+    word-wrap: break-word;
+    font-family: 'Gilroy Bold';
+    color: #f0624d;
+}
+
+.dashboard #expense ul.list li #edit{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 50px;
+    top: 5px;
+    cursor: pointer;
+    background-image: url("image/edit.svg");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+
+.dashboard #expense ul.list li #delete{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 20px;
+    top: 5px;
+    cursor: pointer;
+    background-image: url('image/trash.svg');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+
+/* /////// INCOME //////// */
+/* When the "Income" button is selected (Same format as "All" button)*/
+.dashboard #income{
+    width: 360px;
+    height: 339px;
+    position: relative;
+}
+
+.dashboard #income .input{
+    position: absolute;
+    display: block;
+    left: 175px;
+    width: 400px;
+    bottom: 0;
+    border-top: 1px solid #ccc;
+}
+
+.dashboard #income .input *{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.dashboard #income .input input#income-title-input{
+    height: 40px;
+    width : 150px;
+    padding-left: 10px;
+    font-size: 1.2em;
+    font-family: 'Gilroy';
+    margin: 5px;
+    margin-left: 10px;
+    border-radius: 10px 10px;
+    border: none;
+}
+
+.dashboard #income .input input#income-amount-input{
+    height: 40px;
+    width : 150px;
+    padding-left: 10px;
+    font-size: 1.2em;
+    font-family: 'Gilroy';
+    margin: 5px;
+    margin-left: -5px;
+    border-radius: 10px 10px;
+    border: none;
+}
+
+.dashboard #income .input .add-income img{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.dashboard #income ul{
+    width: 710px;
+    height: 285px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.dashboard #income ul.list li{
+    position: relative;
+    font-size: 1.5em;
+}
+
+.dashboard #income ul.list li *{
+    display: inline-block;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.dashboard #income ul.list li .entry{
+    width: 250px;
+    height: auto;
+    padding-left: 40px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    font-family: 'Gilroy Bold';
+}
+
+.dashboard #income ul.list li #edit{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 50px;
+    top: 5px;
+    cursor: pointer;
+    background-image: url("image/edit.svg");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+
+.dashboard #income ul.list li #delete{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 20px;
+    top: 5px;
+    cursor: pointer;
+    background-image: url('image/trash.svg');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
